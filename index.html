@@ -138,4 +138,96 @@
             </a>
         </div>
     </header>
-           
+<main class="container mx-auto px-4 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="card-kawaii p-8 text-center group overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-kawaii-highlight">บริการของเรา</h3>
+                <p class="mb-6 text-kawaii-text/80">รับทำป้าย ลายน้ำ<br>ราคาเริ่มต้นเพียง 39-89.- เท่านั้น</p>
+                <div class="h-1 w-12 bg-pastel-pink mx-auto rounded-full"></div>
+            </div>
+
+            <div class="card-kawaii p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl">⭐️</span> ตัวอย่างผลงาน
+                    </h3>
+                    <ul class="space-y-3 mb-8">
+                        <li>
+                            <a href="https://drive.google.com/drive/folders/1_58VPS49paAbSaYwq0AFSdkG_a_MVqtw?usp=drive_link" target="_blank" class="flex items-center gap-2 hover:text-kawaii-highlight transition-colors italic">
+                                <span>•</span> รวมแนวทางร้านทั้งหมด
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/drive/folders/1iQuCRRHrbLby8piPovedf_3ERHmEkqaI?usp=drive_link" target="_blank" class="flex items-center gap-2 hover:text-kawaii-highlight transition-colors italic">
+                                <span>•</span> ตัวอย่างปล่อยเอฟ (แก้ข้อมูล/รูปได้)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="openModal('modal-portfolio')" class="btn-kawaii w-full py-3 rounded-2xl text-white font-bold tracking-wider">VIEW FOLDER</button>
+            </div>
+
+            <div class="card-kawaii p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl">🎁</span> คลังของแต่ง & ตูน
+                    </h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="https://drive.google.com/drive/folders/1BmW1xwYdp-d6NwWGNpLsR7P4Mg7j6jns?usp=drive_link" target="_blank" class="block p-2 bg-pastel-purpleLight rounded-lg hover:bg-pastel-purple/20 transition-colors">∙ บล็อกทางร้าน</a>
+                        <a href="https://drive.google.com/drive/folders/1cI9jrKwrgrG66p2lSeYDWGQfmXZF420p?usp=drive_link" target="_blank" class="block p-2 bg-pastel-blueLight rounded-lg hover:bg-pastel-blue/20 transition-colors">∙ ของตกแต่งทางร้าน</a>
+                        <a href="https://drive.google.com/drive/folders/1_rRAmTfvbzIOcTaJSI0s4hIE-HkhrbjO?usp=drive_link" target="_blank" class="block p-2 bg-pastel-pinkLight rounded-lg hover:bg-pastel-pink/20 transition-colors">∙ ตูนทางร้าน</a>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-dashed border-kawaii-border text-center text-xs text-kawaii-text/60 italic">
+                    อัปเดตของใหม่ทุกสัปดาห์
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-16 card-kawaii p-8 md:p-12 overflow-hidden bg-white">
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-pastel-yellow/30 rounded-full blur-3xl"></div>
+            <h2 class="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+                <span class="text-4xl">📜</span> กฎของทางร้าน
+            </h2>
+            <div class="max-w-2xl mx-auto space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 rounded-full bg-pastel-purple flex items-center justify-center text-white shrink-0 mt-1 shadow-sm">1</div>
+                    <p class="text-lg">รองาน <span class="font-bold text-kawaii-highlight">24 ชั่วโมง</span> (ถ้าสั่งเกิน 3 ป้าย ใช้เวลา 1-2 วัน)</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 rounded-full bg-pastel-pink flex items-center justify-center text-white shrink-0 mt-1 shadow-sm">2</div>
+                    <p class="text-lg">งานเร่ง <span class="font-bold text-kawaii-highlight">+50.-</span> ได้รับงานภายใน 3-5 ชั่วโมง</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 rounded-full bg-pastel-blue flex items-center justify-center text-white shrink-0 mt-1 shadow-sm">3</div>
+                    <p class="text-lg"><span class="font-bold">โอนเงิน = จองคิว</span> (ไม่รับจองคิวปากเปล่าทุกกรณีนะจ๊ะ)</p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 rounded-full bg-pastel-yellow flex items-center justify-center text-white shrink-0 mt-1 shadow-sm">4</div>
+                    <p class="text-lg">ทางร้าน <span class="underline decoration-pastel-pink decoration-2">ไม่รับเรฟจากร้านอื่น</span> นะคะ ขออภัยในความไม่สะดวกค่ะ</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-portfolio" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4" onclick="closeModal('modal-portfolio')">
+        <div class="modal-content card-kawaii max-w-lg w-full p-8" onclick="event.stopPropagation()">
+            <h3 class="text-2xl font-bold mb-4 text-kawaii-highlight">Sleepy Gallery</h3>
+            <p class="mb-6">คุณกำลังจะไปยัง Google Drive เพื่อดูผลงานทั้งหมดของเรา</p>
+            <div class="flex gap-4">
+                <button onclick="closeModal('modal-portfolio')" class="flex-1 py-3 rounded-xl border-2 border-kawaii-border font-bold">ปิดหน้าต่าง</button>
+                <a href="https://drive.google.com/drive/folders/1_58VPS49paAbSaYwq0AFSdkG_a_MVqtw?usp=drive_link" target="_blank" class="flex-1 btn-kawaii py-3 rounded-xl text-white font-bold text-center">ไปยัง Drive</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = 'auto'; }
+    </script>
+</body>
+</html>           
