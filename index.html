@@ -7,15 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka:wght@400;500;600;700&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        eng: ['Fredoka', 'sans-serif'],
+                        // เปลี่ยนทุก alias ให้ชี้ไปที่ Mitr เพื่อให้ฟอนต์เหมือนกันทั้งเว็บ
+                        eng: ['Mitr', 'sans-serif'],
                         thai: ['Mitr', 'sans-serif'],
-                        logo: ['"Alfa Slab One"', 'serif'],
+                        logo: ['Mitr', 'sans-serif'],
                     },
                     colors: {
                         pastel: {
@@ -70,6 +71,7 @@
     </script>
     <style>
         body {
+            font-family: 'Mitr', sans-serif !important;
             background-color: #f7f3ff;
             background-image: 
                 radial-gradient(circle at top left, rgba(181, 227, 255, 0.5) 0%, transparent 40%),
@@ -114,17 +116,17 @@
 
             <div class="text-center">
                 <h1 class="relative inline-block mb-4">
-                    <span class="title-stroke font-logo text-7xl md:text-8xl absolute inset-0 text-white select-none">SLEEPY</span>
-                    <span class="relative font-logo text-7xl md:text-8xl text-kawaii-highlight drop-shadow-sm">SLEEPY</span>
+                    <span class="title-stroke font-logo text-7xl md:text-8xl absolute inset-0 text-white select-none font-bold">SLEEPY</span>
+                    <span class="relative font-logo text-7xl md:text-8xl text-kawaii-highlight drop-shadow-sm font-bold">SLEEPY</span>
                 </h1>
-                <p class="font-eng text-xl tracking-[0.3em] text-pastel-purpleDark font-bold mt-2 italic">WELCOME TO SLEEPY SHOP</p>
+                <p class="font-thai text-xl tracking-[0.2em] text-pastel-purpleDark font-medium mt-2 italic">WELCOME TO SLEEPY SHOP</p>
                 
                 <div class="mt-8 inline-flex items-center gap-4 bg-white/80 backdrop-blur px-6 py-3 rounded-full border-2 border-pastel-purple shadow-kawaii">
                     <span class="flex h-3 w-3 relative">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
-                    <span class="text-sm font-medium">Shop Status: <span class="text-green-600 font-bold">Open Now</span></span>
+                    <span class="text-sm font-medium">Shop Status: <span class="text-green-600 font-bold">เปิดให้บริการแล้วค่ะ</span></span>
                 </div>
             </div>
         </div>
@@ -137,7 +139,7 @@
                 <div class="bg-pastel-purpleLight p-3 rounded-2xl">☁️</div>
                 <h2 class="text-2xl font-bold text-kawaii-highlight">About Sleepy ィ</h2>
             </div>
-            <p class="text-lg leading-relaxed mb-6">
+            <p class="text-lg leading-relaxed mb-6 font-medium">
                 เปิดให้บริการแล้วนะคะ ทางร้านรับทำป้าย ลายน้ำ และงานกราฟิกอื่นๆ หลายแนวทาง <br>
                 <span class="bg-pastel-yellow px-2 rounded font-bold italic text-purple-700">ราคาเริ่มต้นเพียง 39 - 89.- เท่านั้น!</span>
             </p>
@@ -160,13 +162,13 @@
         <section class="card-kawaii p-8 mb-12">
             <h3 class="text-xl font-bold mb-6 text-center underline decoration-dotted decoration-pastel-purple">Resources / ส่วนประกอบงาน</h3>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <a href="https://drive.google.com/drive/folders/1BmW1xwYdp-d6NwWGNpLsR7P4Mg7j6jns?usp=drive_link" target="_blank" class="bg-pastel-blueLight p-4 rounded-2xl text-center hover:bg-pastel-blue transition-colors">
+                <a href="https://drive.google.com/drive/folders/1BmW1xwYdp-d6NwWGNpLsR7P4Mg7j6jns?usp=drive_link" target="_blank" class="bg-pastel-blueLight p-4 rounded-2xl text-center hover:bg-pastel-blue transition-colors font-medium">
                     <span class="block text-2xl mb-1">📦</span> บล็อกทางร้าน
                 </a>
-                <a href="https://drive.google.com/drive/folders/1cI9jrKwrgrG66p2lSeYDWGQfmXZF420p?usp=drive_link" target="_blank" class="bg-pastel-pinkLight p-4 rounded-2xl text-center hover:bg-pastel-pink transition-colors">
+                <a href="https://drive.google.com/drive/folders/1cI9jrKwrgrG66p2lSeYDWGQfmXZF420p?usp=drive_link" target="_blank" class="bg-pastel-pinkLight p-4 rounded-2xl text-center hover:bg-pastel-pink transition-colors font-medium">
                     <span class="block text-2xl mb-1">🎀</span> ของตกแต่ง
                 </a>
-                <a href="https://drive.google.com/drive/folders/1_rRAmTfvbzIOcTaJSI0s4hIE-HkhrbjO?usp=drive_link" target="_blank" class="bg-pastel-yellowLight p-4 rounded-2xl text-center hover:bg-pastel-yellow transition-colors">
+                <a href="https://drive.google.com/drive/folders/1_rRAmTfvbzIOcTaJSI0s4hIE-HkhrbjO?usp=drive_link" target="_blank" class="bg-pastel-yellowLight p-4 rounded-2xl text-center hover:bg-pastel-yellow transition-colors font-medium">
                     <span class="block text-2xl mb-1">🧸</span> ตูนทางร้าน
                 </a>
             </div>
@@ -175,7 +177,7 @@
         <div class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="card-kawaii p-8 border-l-8 border-l-red-300">
                 <h3 class="text-xl font-bold mb-4">📢 กฎของร้าน</h3>
-                <ul class="space-y-3 text-sm">
+                <ul class="space-y-3 text-sm font-medium">
                     <li class="flex items-start gap-2">🌸 <span>รองาน 24 ชั่วโมง (สั่งเกิน 3 ป้าย 1-2 วัน)</span></li>
                     <li class="flex items-start gap-2">⚡ <span>งานเร่ง +50 (ได้งานใน 3-5 ชั่วโมง)</span></li>
                     <li class="flex items-start gap-2">💰 <span>โอนเงิน = จองคิว (ไม่รับจองปากเปล่า)</span></li>
@@ -184,7 +186,7 @@
             </div>
             <div class="card-kawaii p-8 border-l-8 border-l-blue-300">
                 <h3 class="text-xl font-bold mb-4">📝 ขั้นตอนการบรีฟ</h3>
-                <div class="bg-white/50 p-4 rounded-xl text-xs font-mono space-y-1">
+                <div class="bg-white/50 p-4 rounded-xl text-xs space-y-1 font-medium">
                     <p>♡ ชื่อป้ายหัวข้อ/ลายน้ำ :</p>
                     <p>♡ โทนสี (ระบุละเอียด/แปะรูป) :</p>
                     <p>♡ ข้อมูล (คำบรีฟ/คิวอาร์/เลขธนาคาร) :</p>
@@ -208,7 +210,7 @@
 
     </main>
 
-    <footer class="text-center py-10 opacity-50 text-sm">
+    <footer class="text-center py-10 opacity-50 text-sm font-medium">
         <p>© 2026 Sleepy ィ All Rights Reserved</p>
     </footer>
 
