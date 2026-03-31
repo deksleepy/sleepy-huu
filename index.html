@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleepy ィ Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka:wght@400;500;600;700&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        eng: ['Fredoka', 'sans-serif'],
+                        thai: ['Mitr', 'sans-serif'],
+                        logo: ['"Alfa Slab One"', 'serif'],
+                    },
+                    colors: {
+                        pastel: {
+                            purple: '#dcb5ff',
+                            purpleLight: '#f5eeff',
+                            purpleDark: '#9b72cf',
+                            blue: '#b5e3ff',
+                            blueLight: '#ebf7ff',
+                            pink: '#ffb5d9',
+                            pinkLight: '#ffebf4',
+                            yellow: '#ffeeb5',
+                            yellowLight: '#fffcf2',
+                        },
+                        kawaii: {
+                            bg: '#f7f3ff',
+                            card: '#ffffff',
+                            text: '#825e9c',
+                            border: '#dcb5ff',
+                            highlight: '#b27ee6',
+                            header: '#eaddff'
+                        }
+                    },
+                    boxShadow: {
+                        'kawaii': '0 8px 24px -6px rgba(220, 181, 255, 0.4)',
+                        'kawaii-inner': 'inset 0 2px 4px 0 rgba(220, 181, 255, 0.2)',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'gradient-x': 'gradient-x 3s ease infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'gradient-x': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f3ff;
+            background-image: 
+                radial-gradient(circle at top left, rgba(181, 227, 255, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at bottom right, rgba(255, 181, 217, 0.5) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 238, 181, 0.4) 0%, transparent 40%),
+                radial-gradient(#dcb5ff 2px, transparent 2px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 30px 30px;
+            background-attachment: fixed;
+        }
+        .title-stroke { -webkit-text-stroke: 10px white; }
+        .card-kawaii {
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid #dcb5ff;
+            border-radius: 28px;
+            box-shadow: 0 10px 25px -5px rgba(220, 181, 255, 0.4);
+            position: relative;
+        }
+        .btn-kawaii {
+            background: linear-gradient(135deg, #dcb5ff 0%, #ffb5d9 100%);
+            border: 2px solid #fff;
+            box-shadow: 0 4px 12px rgba(220, 181, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-kawaii:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 16px rgba(220, 181, 255, 0.7);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5eeff; }
+        ::-webkit-scrollbar-thumb { background: #dcb5ff; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-thai text-kawaii-text">
+
+    <header class="relative pt-8 pb-12 overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex justify-center gap-3 mb-8">
+                <span class="w-4 h-4 rounded-full bg-pastel-pink animate-pulse"></span>
+                <span class="w-4 h-4 rounded-full bg-pastel-blue animate-bounce"></span>
+                <span class="w-4 h-4 rounded-full bg-pastel-yellow animate-pulse"></span>
+            </div>
+
+            <div class="text-center">
+                <h1 class="relative inline-block mb-4">
+                    <span class="title-stroke font-logo text-7xl md:text-8xl absolute inset-0 text-white select-none">SLEEPY</span>
+                    <span class="relative font-logo text-7xl md:text-8xl text-kawaii-highlight drop-shadow-sm">SLEEPY</span>
+                </h1>
+                <p class="font-eng text-xl tracking-[0.3em] text-pastel-purpleDark font-bold mt-2 italic">WELCOME TO SLEEPY SHOP</p>
+                
+                <div class="mt-8 inline-flex items-center gap-4 bg-white/80 backdrop-blur px-6 py-3 rounded-full border-2 border-pastel-purple shadow-kawaii">
+                    <span class="flex h-3 w-3 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm font-medium">Shop Status: <span class="text-green-600 font-bold">Open Now</span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-20 max-w-4xl">
+        
+        <section class="card-kawaii p-8 mb-12">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-pastel-purpleLight p-3 rounded-2xl">☁️</div>
+                <h2 class="text-2xl font-bold text-kawaii-highlight">About Sleepy ィ</h2>
+            </div>
+            <p class="text-lg leading-relaxed mb-6">
+                เปิดให้บริการแล้วนะคะ ทางร้านรับทำป้าย ลายน้ำ และงานกราฟิกอื่นๆ หลายแนวทาง <br>
+                <span class="bg-pastel-yellow px-2 rounded font-bold italic text-purple-700">ราคาเริ่มต้นเพียง 39 - 89.- เท่านั้น!</span>
+            </p>
+            <a href="https://ksm-bb.github.io/sleepyroom/" target="_blank" class="block w-full border-2 border-dashed border-pastel-purple p-4 rounded-2xl text-center hover:bg-pastel-purpleLight transition-all group">
+                <span class="font-bold text-pastel-purpleDark group-hover:scale-110 inline-block transition-transform">✨ เช็คคิวงานทางร้านที่นี่ ✨</span>
+            </a>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="card-kawaii p-6 hover:scale-[1.02] transition-transform">
+                <h3 class="font-bold text-xl mb-4 flex items-center gap-2">⭐ Portfolio <span class="text-sm font-normal text-gray-400">ตัวอย่างงาน</span></h3>
+                <a href="https://drive.google.com/drive/folders/1_58VPS49paAbSaYwq0AFSdkG_a_MVqtw?usp=drive_link" target="_blank" class="btn-kawaii block text-center py-3 rounded-xl text-white font-bold">ดูตัวอย่างรวมแนวทาง</a>
+            </div>
+            <div class="card-kawaii p-6 hover:scale-[1.02] transition-transform">
+                <h3 class="font-bold text-xl mb-4 flex items-center gap-2">⭐ Ready to Use <span class="text-sm font-normal text-gray-400">งานปล่อยเอฟ</span></h3>
+                <a href="https://drive.google.com/drive/folders/1iQuCRRHrbLby8piPovedf_3ERHmEkqaI?usp=drive_link" target="_blank" class="btn-kawaii block text-center py-3 rounded-xl text-white font-bold">เลือกดูงานพร้อมใช้</a>
+            </div>
+        </div>
+
+        <section class="card-kawaii p-8 mb-12">
+            <h3 class="text-xl font-bold mb-6 text-center underline decoration-dotted decoration-pastel-purple">Resources / ส่วนประกอบงาน</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="https://drive.google.com/drive/folders/1BmW1xwYdp-d6NwWGNpLsR7P4Mg7j6jns?usp=drive_link" target="_blank" class="bg-pastel-blueLight p-4 rounded-2xl text-center hover:bg-pastel-blue transition-colors">
+                    <span class="block text-2xl mb-1">📦</span> บล็อกทางร้าน
+                </a>
+                <a href="https://drive.google.com/drive/folders/1cI9jrKwrgrG66p2lSeYDWGQfmXZF420p?usp=drive_link" target="_blank" class="bg-pastel-pinkLight p-4 rounded-2xl text-center hover:bg-pastel-pink transition-colors">
+                    <span class="block text-2xl mb-1">🎀</span> ของตกแต่ง
+                </a>
+                <a href="https://drive.google.com/drive/folders/1_rRAmTfvbzIOcTaJSI0s4hIE-HkhrbjO?usp=drive_link" target="_blank" class="bg-pastel-yellowLight p-4 rounded-2xl text-center hover:bg-pastel-yellow transition-colors">
+                    <span class="block text-2xl mb-1">🧸</span> ตูนทางร้าน
+                </a>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="card-kawaii p-8 border-l-8 border-l-red-300">
+                <h3 class="text-xl font-bold mb-4">📢 กฎของร้าน</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-2">🌸 <span>รองาน 24 ชั่วโมง (สั่งเกิน 3 ป้าย 1-2 วัน)</span></li>
+                    <li class="flex items-start gap-2">⚡ <span>งานเร่ง +50 (ได้งานใน 3-5 ชั่วโมง)</span></li>
+                    <li class="flex items-start gap-2">💰 <span>โอนเงิน = จองคิว (ไม่รับจองปากเปล่า)</span></li>
+                    <li class="flex items-start gap-2">❌ <span>ไม่รับทำตามเรฟจากร้านอื่นนะคะ</span></li>
+                </ul>
+            </div>
+            <div class="card-kawaii p-8 border-l-8 border-l-blue-300">
+                <h3 class="text-xl font-bold mb-4">📝 ขั้นตอนการบรีฟ</h3>
+                <div class="bg-white/50 p-4 rounded-xl text-xs font-mono space-y-1">
+                    <p>♡ ชื่อป้ายหัวข้อ/ลายน้ำ :</p>
+                    <p>♡ โทนสี (ระบุละเอียด/แปะรูป) :</p>
+                    <p>♡ ข้อมูล (คำบรีฟ/คิวอาร์/เลขธนาคาร) :</p>
+                    <p>♡ เลือกตูน/ของแต่ง/บล็อก :</p>
+                    <p>♡ ฟอนต์ (ทางการหรือน่ารัก) :</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="text-center">
+            <h3 class="font-bold text-2xl mb-8">Contact Me / ติดต่อสั่งงาน</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://line.me/ti/p/j4VHsXftfs" target="_blank" class="btn-kawaii px-10 py-4 rounded-full text-white font-bold flex items-center gap-2">
+                    LINE Official
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61584210744859&locale=th_TH" target="_blank" class="bg-blue-500 hover:bg-blue-600 px-10 py-4 rounded-full text-white font-bold shadow-lg transition-all flex items-center gap-2">
+                    Facebook Page
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-10 opacity-50 text-sm">
+        <p>© 2026 Sleepy ィ All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
